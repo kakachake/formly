@@ -1,0 +1,24 @@
+{
+  "name": "@formly/reactive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib",
+  "module": "esm",
+  "type": "module",
+  "umd:main": "dist/formly.reactive.umd.production.js",
+  "unpkg": "dist/formly.reactive.umd.production.js",
+  "jsdelivr": "dist/formly.reactive.umd.production.js",
+  "jsnext:main": "esm",
+  "types": "esm/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rollup --config -w",
+    "build": "rimraf -rf lib esm dist && npm run build:cjs && npm run build:esm && npm run build:umd",
+    "build:cjs": "tsc --project tsconfig.build.json",
+    "build:esm": "tsc --project tsconfig.build.json --module es2015 --outDir esm",
+    "build:umd": "rollup --config"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
